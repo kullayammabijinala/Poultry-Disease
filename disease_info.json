@@ -1,0 +1,44 @@
+{
+    "coccidiosis": {
+        "symptoms": "Bloody droppings, diarrhea, weight loss",
+        "features": "Parasitic disease in intestines caused by protozoa",
+        "treatment": "Use anticoccidial drugs and keep litter dry",
+        "preventions": "Vaccination, proper sanitation, use of coccidiostats in feed"
+    },
+    "fowlpox": {
+        "symptoms": "Lesions on comb, scabs, droopy wings",
+        "features": "Viral disease affecting skin and upper respiratory tract",
+        "treatment": "Vaccinate and isolate affected birds",
+        "preventions": "Vaccination, mosquito control, strict biosecurity"
+    },
+    "newcastle": {
+        "symptoms": "Sneezing, coughing, paralysis, greenish droppings",
+        "features": "Highly contagious viral disease affecting respiratory & nervous systems",
+        "treatment": "No cure. Prevent through vaccination and good biosecurity",
+        "preventions": "Routine vaccination programs, strict biosecurity measures, isolation of new birds"
+    },
+    "infectious_bronchitis": {
+        "symptoms": "Respiratory distress, nasal discharge, coughing, sneezing, watery eyes",
+        "features": "Highly contagious viral disease affecting the respiratory system",
+        "treatment": "No specific treatment; supportive care and prevention through vaccination",
+        "preventions": "Vaccination, good ventilation, maintaining optimal environmental conditions"
+    },
+    "marek's_disease": {
+        "symptoms": "Paralysis, tumors, enlarged feather follicles",
+        "features": "Viral disease causing tumors in various organs and nerve damage",
+        "treatment": "No treatment; prevention through vaccination at hatch",
+        "preventions": "Vaccination of chicks at the hatchery is crucial, good hygiene"
+    },
+    "salmonellosis": {
+        "symptoms": "Diarrhea, dehydration, weight loss, joint swelling",
+        "features": "Bacterial infection causing inflammation of the intestines and other organs",
+        "treatment": "Antibiotics, supportive care, hygiene",
+        "preventions": "Good sanitation, clean feed and water, rodent control, sourcing healthy chicks"
+    },
+    "aspergillosis": {
+        "symptoms": "Gasping, coughing, nasal discharge, cyanosis, somnolence",
+        "features": "Fungal infection primarily affecting the respiratory system",
+        "treatment": "Antifungal medication, improving ventilation and hygiene",
+        "preventions": "Proper ventilation, dry litter, avoid moldy feed, disinfect brooders"
+    }
+}
