@@ -1,0 +1,217 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PoultryDetect - Poultry Health Hub</title>
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Google Fonts - Inter -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <!-- Font Awesome for icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <style>
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: #000; /* Deep black background */
+            color: #f0f0f0; /* Light gray text */
+            margin: 0;
+            padding: 0;
+            overflow-x: hidden; /* Prevent horizontal scrolling */
+        }
+        .header-bg {
+            background-color: #0d0d0d; /* Slightly lighter black for header */
+        }
+        .hero-section {
+            min-height: 80vh; /* Make hero section tall */
+            /* Removed background-image property */
+            background-size: cover;
+            background-position: center;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+        }
+        .card-image {
+            width: 100%;
+            height: 200px; /* Fixed height for consistent card size */
+            object-fit: cover;
+            border-top-left-radius: 0.5rem;
+            border-top-right-radius: 0.5rem;
+        }
+        .card-image-top {
+            width: 100%;
+            height: 200px; /* Adjusted height for the image at the top of the card */
+            object-fit: cover;
+            border-top-left-radius: 0.5rem;
+            border-top-right-radius: 0.5rem;
+        }
+        .button-primary {
+            background: linear-gradient(to right, #4CAF50, #8BC34A); /* Green gradient */
+            transition: transform 0.2s ease-in-out, box-shadow 0.2s ease-in-out;
+        }
+        .button-primary:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 8px 15px rgba(0, 255, 0, 0.3);
+        }
+        .nav-link {
+            transition: color 0.2s ease-in-out;
+        }
+        .nav-link:hover {
+            color: #4CAF50; /* Green on hover */
+        }
+        /* No specific file selector button styling needed here as the upload section is removed */
+    </style>
+</head>
+<body class="antialiased">
+    <!-- Header -->
+    <header class="header-bg py-4 shadow-lg fixed top-0 left-0 w-full z-50">
+        <nav class="container mx-auto px-4 flex justify-between items-center">
+            <!-- Logo/Title -->
+            <a href="/" class="text-2xl font-bold text-white rounded-md p-2 hover:text-green-400 transition-colors">PoultryDetect</a>
+
+            <!-- Navigation Links -->
+            <ul class="hidden md:flex space-x-6">
+                <li><a href="#home" class="nav-link text-gray-300 hover:text-green-400 transition-colors py-2 px-3 rounded-md">HOME</a></li>
+                <li><a href="/predict_page" class="nav-link text-gray-300 hover:text-green-400 transition-colors py-2 px-3 rounded-md">PREDICT DISEASE</a></li>
+                <li><a href="#about" class="nav-link text-gray-300 hover:text-green-400 transition-colors py-2 px-3 rounded-md">ABOUT</a></li>
+                <li><a href="#contact" class="nav-link text-gray-300 hover:text-green-400 transition-colors py-2 px-3 rounded-md">CONTACT</a></li>
+            </ul>
+
+            <!-- Social Media Icons (Placeholder) -->
+            <div class="hidden md:flex space-x-4">
+                <a href="#" class="text-gray-400 hover:text-green-400 transition-colors"><i class="fab fa-facebook-f"></i></a>
+                <a href="#" class="text-gray-400 hover:text-green-400 transition-colors"><i class="fab fa-twitter"></i></a>
+                <a href="#" class="text-gray-400 hover:text-green-400 transition-colors"><i class="fab fa-linkedin-in"></i></a>
+                <a href="#" class="text-gray-400 hover:text-green-400 transition-colors"><i class="fab fa-instagram"></i></a>
+            </div>
+
+            <!-- Mobile Menu Button (Hamburger) -->
+            <button id="mobile-menu-button" class="md:hidden text-gray-300 hover:text-green-400 focus:outline-none">
+                <i class="fas fa-bars text-xl"></i>
+            </button>
+        </nav>
+        <!-- Mobile Menu -->
+        <div id="mobile-menu" class="hidden md:hidden bg-gray-800 px-4 pt-2 pb-4 space-y-1">
+            <a href="#home" class="block text-gray-300 hover:bg-gray-700 hover:text-white px-3 py-2 rounded-md text-base font-medium">HOME</a>
+            <a href="/predict_page" class="block text-gray-300 hover:bg-gray-700 hover:text-white px-3 py-2 rounded-md text-base font-medium">PREDICT DISEASE</a>
+            <a href="#about" class="block text-gray-300 hover:bg-gray-700 hover:text-white px-3 py-2 rounded-md text-base font-medium">ABOUT</a>
+            <a href="#contact" class="block text-gray-300 hover:bg-gray-700 hover:text-white px-3 py-2 rounded-md text-base font-medium">CONTACT</a>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section id="home" class="hero-section text-white pt-24 pb-12">
+        <div class="max-w-4xl mx-auto px-4">
+            <h1 class="text-lg md:text-xl lg:text-2xl font-bold mb-6 leading-tight rounded-md p-2">
+                Welcome to <span class="text-green-400">Poultry Health Hub</span>, your comprehensive resource for poultry disease management and prevention.
+            </h1>
+            <p class="text-xs mb-8 text-gray-300 rounded-md p-2">
+                Gain insights into common poultry diseases, their symptoms, features, and effective treatment strategies. Empower your farm with knowledge.
+            </p>
+            <a href="/predict_page" class="button-primary text-white font-semibold py-3 px-8 rounded-full shadow-lg hover:shadow-xl transition duration-300 ease-in-out inline-block">
+                GET STARTED
+            </a>
+        </div>
+    </section>
+
+    <!-- Disease Information Cards Section -->
+    <section id="diseases" class="py-16 bg-black">
+        <div class="container mx-auto px-4">
+            <h2 class="text-3xl md:text-4xl font-bold text-center mb-12 text-green-400">Common Poultry Diseases</h2>
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+                <!-- Card 1: Coccidiosis -->
+                <div class="bg-gray-800 rounded-xl shadow-xl overflow-hidden transform hover:scale-105 transition duration-300 ease-in-out">
+                   <img src="{{ url_for('static', filename='uploads/cocci2.jpeg') }}" alt="Coccidiosis" class="card-image-top">
+                    <div class="p-6">
+                        <h3 class="text-xl font-semibold mb-2 text-green-300">Coccidiosis</h3>
+                        <p class="text-gray-400 text-sm">A parasitic disease affecting the intestinal tract, common in young poultry.</p>
+                    </div>
+                </div>
+
+                <!-- Card 2: Fowl Pox -->
+                <div class="bg-gray-800 rounded-xl shadow-xl overflow-hidden transform hover:scale-105 transition duration-300 ease-in-out">
+                    <img src="{{ url_for('static', filename='uploads/fowl2.jpeg') }}" alt="Fowl Pox" class="card-image-top">
+                    <div class="p-6">
+                        <h3 class="text-xl font-semibold mb-2 text-green-300">Fowl Pox</h3>
+                        <p class="text-gray-400 text-sm">A viral disease causing lesions on unfeathered skin and mucous membranes.</p>
+                    </div>
+                </div>
+
+                <!-- Card 3: Newcastle Disease -->
+                <div class="bg-gray-800 rounded-xl shadow-xl overflow-hidden transform hover:scale-105 transition duration-300 ease-in-out">
+                    <img src="{{ url_for('static', filename='uploads/new1.jpeg') }}" alt="Newcastle Disease" class="card-image-top">
+                    <div class="p-6">
+                        <h3 class="text-xl font-semibold mb-2 text-green-300">Newcastle Disease</h3>
+                        <p class="text-gray-400 text-sm">A highly contagious and fatal viral disease affecting respiratory, nervous, and digestive systems.</p>
+                    </div>
+                </div>
+
+                <!-- Card 4: Avian Influenza -->
+                <div class="bg-gray-800 rounded-xl shadow-xl overflow-hidden transform hover:scale-105 transition duration-300 ease-in-out">
+    <img src="{{ url_for('static', filename='uploads/avian1.jpeg') }}" alt="Avian Influenza" class="card-image-top">
+                    <div class="p-6">
+                        <h3 class="text-xl font-semibold mb-2 text-green-300">Avian Influenza</h3>
+                        <p class="text-gray-400 text-sm">A viral infection that can cause mild to severe symptoms, and even sudden death.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section (Placeholder) -->
+    <section id="about" class="py-16 bg-gray-900">
+        <div class="container mx-auto px-4 text-center">
+            <h2 class="text-3xl md:text-4xl font-bold mb-8 text-green-400">About Us</h2>
+            <p class="text-lg text-gray-300 max-w-2xl mx-auto">
+                PoultryDetect is dedicated to providing fast and accurate disease detection for poultry farmers. Our mission is to support a healthier and more sustainable poultry industry through advanced AI technology and comprehensive information.
+            </p>
+        </div>
+    </section>
+
+    <!-- Contact Section (Placeholder) -->
+    <section id="contact" class="py-16 bg-black">
+        <div class="container mx-auto px-4 text-center">
+            <h2 class="text-3xl md:text-4xl font-bold mb-8 text-green-400">Contact Us</h2>
+            <p class="text-lg text-gray-300 max-w-2xl mx-auto">
+                Have questions or need support? Reach out to us at <a href="mailto:info@poultrydetect.com" class="text-green-400 hover:underline">info@poultrydetect.com</a> or follow us on social media.
+            </p>
+            <div class="flex justify-center space-x-6 mt-8">
+                <a href="#" class="text-gray-400 hover:text-green-400 transition-colors text-3xl"><i class="fab fa-facebook-square"></i></a>
+                <a href="#" class="text-gray-400 hover:text-green-400 transition-colors text-3xl"><i class="fab fa-twitter-square"></i></a>
+                <a href="#" class="text-gray-400 hover:text-green-400 transition-colors"><i class="fab fa-linkedin"></i></a>
+            </div>
+        </div>
+    </section>
+
+
+    <!-- Footer -->
+    <footer class="bg-gray-800 py-6 text-center text-gray-400">
+        <p>&copy; 2025 PoultryDetect. All rights reserved.</p>
+    </footer>
+
+    <script>
+        // Smooth scroll for navigation links - updated to handle external links (like /predict_page)
+        document.querySelectorAll('a[href^="#"], a[href^="/"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                const href = this.getAttribute('href');
+                if (href.startsWith('#')) {
+                    e.preventDefault();
+                    document.querySelector(href).scrollIntoView({
+                        behavior: 'smooth'
+                    });
+                }
+                // For links starting with '/', the default navigation will occur
+            });
+        });
+
+        // Mobile menu toggle
+        const mobileMenuButton = document.getElementById('mobile-menu-button');
+        const mobileMenu = document.getElementById('mobile-menu');
+
+        mobileMenuButton.addEventListener('click', () => {
+            mobileMenu.classList.toggle('hidden');
+        });
+    </script>
+</body>
+</html>
